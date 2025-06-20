@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corona Custom Iron Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo-left">
+      <img src="images/logo_corona2.png" alt="Corona Logo">
+    </div>
+    <nav class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-us-header">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear about your project. Fill out the form below and we’ll get back to you shortly.</p>
+  </main>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Request a Custom Quote</h2>
+
+      <form action="https://formsubmit.co/luisfc0406@gmail.com" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="role">Which describes you best?*</label>
+          <select id="role" name="role" required>
+            <option value="">-- Please Select --</option>
+            <option value="homeowner">Homeowner</option>
+            <option value="contractor">Contractor</option>
+            <option value="business">Business Owner</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Notes</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..."></textarea>
+        </div>
+
+        <!-- Required for Formsubmit to work -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+
+        <button type="submit" class="button">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
