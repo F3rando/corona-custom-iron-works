@@ -29,7 +29,7 @@
     <div class="contact-container">
       <h2>Request a Custom Quote</h2>
 
-      <form action="https://formsubmit.co/luisfc0406@gmail.com" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/xvgrbvzp" method="POST" class="contact-form">
         <div class="form-group">
           <label for="role">Which describes you best?*</label>
           <select id="role" name="role" required>
@@ -66,10 +66,10 @@
           <label for="message">Notes</label>
           <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..."></textarea>
         </div>
+        <input type="hidden" name="_redirect" value="thanks.html">
 
-        <!-- Required for Formsubmit to work -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+
+        
 
         <button type="submit" class="button">Submit Request</button>
       </form>
