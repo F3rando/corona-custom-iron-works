@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Styles | Corona Custom Iron Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo-left">
+      <a href="index.html">
+        <img src="images/logo_corona2.png" alt="Corona Logo">
+      </a>
+    </div>
+    <nav class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="welcome-section fade-in-section">
+    <h1>Our Iron Door Styles</h1>
+    <p>Explore our handcrafted styles — built to last and tailored to your taste.</p>
+  </main>
+
+  <section class="product-type-grid fade-in-section">
+    <div class="product-card">
+      <img src="images/doordesign4.png" alt="Modern Iron Door">
+      <h2>Modern</h2>
+      <p>Sleek lines, minimal design — perfect for clean, contemporary architecture.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/doordesign5.png" alt="Rustic Iron Door">
+      <h2>Rustic</h2>
+      <p>Hand-forged character with warm finishes and traditional materials.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/traditional.png" alt="Traditional Iron Door">
+      <h2>Traditional</h2>
+      <p>Classic scrollwork and timeless details rooted in craftsmanship.</p>
+    </div>
+  </section>
+
+  <section class="gallery-section fade-in-section">
+    <h1>Custom Design Examples</h1>
+    <p>These are one-of-a-kind builds we’ve created for past clients.</p>
+
+    <div class="gallery-grid">
+      <img src="images/irondoor1.jpg" alt="Custom Design 1">
+      <img src="images/irondoor2.jpg" alt="Custom Design 2">
+      <img src="images/irondoor4.jpg" alt="Custom Design 3">
+      <img src="images/door3.jpg" alt="Custom Design 4">
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/transparent logo.png" alt="Corona Logo">
+      </div>
+      <div class="footer-content">
+        <h2>Corona Custom Iron Works</h2>
+        <p>📍 Based in Southern California</p>
+        <p>📞 (951) 508-7490</p>
+        <p>✉️ Coronaiw@gmail.com</p>
+        <a href="contact.html" class="footer-button">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in-section');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
 
