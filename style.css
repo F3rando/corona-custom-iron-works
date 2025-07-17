@@ -480,3 +480,51 @@ body {
   }
 }
 
+/*PRODUCT PAGE*/
+/* Product Type Cards */
+.product-type-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;         /* ✅ Clean, light gray border */
+  background-color: white;        /* ✅ Matches your site’s white background */
+  border-radius: 12px;
+  box-shadow: none;               /* ✅ Remove soft shadow if it was muting colors */
+  text-align: center;
+  width: 320px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 240px;
+  max-height: 300px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #444;
+  padding: 0 15px;
+}
