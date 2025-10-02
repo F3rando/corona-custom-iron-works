@@ -279,6 +279,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   flex-wrap: wrap;
+  gap: 24px;
 }
 
 /* Adjust logo position and spacing */
@@ -287,12 +288,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  min-width: 0;
 }
 
 
 .footer-logo img {
-  height: 125px;
+  display: block;           /* prevents baseline cropping */
+  height: clamp(80px, 10vw, 125px);
+  width: auto;              /* keep aspect ratio */
+  max-width: 100%;          /* never overflow its flex column */
 }
+
 
 /* Optional: right-align contact info */
 .footer-content {
@@ -529,4 +535,5 @@ body {
   color: #444;
   padding: 0 15px;
 }
+
 
