@@ -285,9 +285,10 @@ body {
 .footer-logo {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* ⬅ aligns logo to the left */
-  margin-left: -100px; 
+  align-items: center;
+  justify-content: flex-start;
 }
+
 
 .footer-logo img {
   height: 125px;
@@ -528,3 +529,4 @@ body {
   color: #444;
   padding: 0 15px;
 }
+
